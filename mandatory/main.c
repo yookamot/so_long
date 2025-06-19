@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: okamotoyota <okamotoyota@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:48:17 by yookamot          #+#    #+#             */
-/*   Updated: 2025/02/22 14:33:47 by yookamot         ###   ########.fr       */
+/*   Updated: 2025/06/17 15:07:46 by okamotoyota      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 	init_game(data);
 	load_all_textures(data);
 	mlx_loop_hook(data->mlx, draw_map, data);
-	mlx_hook(data->win, DestroyNotify, 0, destroy_window, data);
+	mlx_hook(data->win, 17, 0, destroy_window, data);
 	mlx_hook(data->win, 2, 1L << 0, key_hook, data);
 	mlx_loop(data->mlx);
 	return (0);

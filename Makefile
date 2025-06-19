@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+         #
+#    By: okamotoyota <okamotoyota@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/13 17:48:57 by yookamot          #+#    #+#              #
-#    Updated: 2025/02/13 23:32:07 by yookamot         ###   ########.fr        #
+#    Updated: 2025/06/17 15:11:35 by okamotoyota      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,8 +57,8 @@ MANDATORY_OBJS = $(MANDATORY_SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 CC = gcc
-CFLAGS = -I./minilibx-linux -I./libft -I./get_next_line -I./ft_printf
-LDFLAGS = -L./minilibx-linux -lmlx -lXext -lX11
+CFLAGS = -I./minilibx -I./libft -I./get_next_line -I./ft_printf
+LDFLAGS = -L./minilibx -lmlx -framework OpenGL -framework AppKit
 
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -70,7 +70,7 @@ GNL_OBJS = $(GNL_SRCS:.c=.o)
 FT_PRINTF_DIR = ./ft_printf
 FT_PRINTF = $(FT_PRINTF_DIR)/ft_printf.a
 
-MLX_DIR = ./minilibx-linux
+MLX_DIR = ./minilibx
 MLX = $(MLX_DIR)/libmlx.a
 
 all: $(NAME)
@@ -87,7 +87,7 @@ $(FT_PRINTF):
 $(NAME): $(MLX) $(MANDATORY_OBJS) $(GNL_OBJS) $(LIBFT) $(FT_PRINTF)
 	$(CC) $(MANDATORY_OBJS) $(GNL_OBJS) $(LDFLAGS) $(LIBFT) $(FT_PRINTF) -o $(NAME)
 
-bonus: $(BONUS_NAME)
+bonus: $(MLX) $(LIBFT) $(FT_PRINTF) $(BONUS_NAME)
 
 $(BONUS_NAME): $(MLX) $(BONUS_OBJS) $(GNL_OBJS) $(LIBFT) $(FT_PRINTF)
 	$(CC) $(BONUS_OBJS) $(GNL_OBJS) $(LDFLAGS) $(LIBFT) $(FT_PRINTF) -o $(BONUS_NAME)

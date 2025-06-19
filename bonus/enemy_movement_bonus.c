@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   enemy_movement_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: okamotoyota <okamotoyota@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 18:48:52 by yookamot          #+#    #+#             */
-/*   Updated: 2025/02/10 17:36:56 by yookamot         ###   ########.fr       */
+/*   Updated: 2025/06/17 23:30:24 by okamotoyota      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,22 @@ int	check_collision(int keycode, t_data *data)
 	int	key;
 
 	key = 0;
-	if (keycode == XK_w && data->map[data->player.y - 1][data->player.x] == 'X')
+	if (keycode == 13 && data->map[data->player.y - 1][data->player.x] == 'X')
 	{
 		key = 1;
 		new_player_set(data, data->player.x, data->player.y - 1);
 	}
-	if (keycode == XK_s && data->map[data->player.y + 1][data->player.x] == 'X')
+	if (keycode == 1 && data->map[data->player.y + 1][data->player.x] == 'X')
 	{
 		key = 1;
 		new_player_set(data, data->player.x, data->player.y + 1);
 	}
-	if (keycode == XK_a && data->map[data->player.y][data->player.x - 1] == 'X')
+	if (keycode == 0 && data->map[data->player.y][data->player.x - 1] == 'X')
 	{
 		key = 1;
 		new_player_set(data, data->player.x - 1, data->player.y);
 	}
-	if (keycode == XK_d && data->map[data->player.y][data->player.x + 1] == 'X')
+	if (keycode == 2 && data->map[data->player.y][data->player.x + 1] == 'X')
 	{
 		key = 1;
 		new_player_set(data, data->player.x + 1, data->player.y);

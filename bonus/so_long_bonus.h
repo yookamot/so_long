@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: okamotoyota <okamotoyota@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 16:47:26 by yookamot          #+#    #+#             */
-/*   Updated: 2025/02/13 23:37:30 by yookamot         ###   ########.fr       */
+/*   Updated: 2025/06/17 15:07:28 by okamotoyota      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include "../ft_printf/ft_printf.h"
 # include "../get_next_line/get_next_line.h"
 # include "../libft/libft.h"
-# include "../minilibx-linux/mlx.h"
-# include <X11/X.h>
-# include <X11/Xlib.h>
-# include <X11/keysym.h>
+# include "../minilibx/mlx.h"
+// # include <X11/X.h>
+// # include <X11/Xlib.h>
+// # include <X11/keysym.h>
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>

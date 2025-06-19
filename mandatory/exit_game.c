@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: okamotoyota <okamotoyota@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 01:18:05 by yookamot          #+#    #+#             */
-/*   Updated: 2025/02/13 23:24:43 by yookamot         ###   ########.fr       */
+/*   Updated: 2025/06/17 15:08:19 by okamotoyota      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	destroy_window(t_data *data)
 {
 	exit_game(data, 0);
+	return (0);
 }
 
 static void	cleanup_textures(t_data *data)
@@ -68,7 +69,6 @@ void	exit_game(t_data *data, int status)
 	cleanup_buffers(data);
 	if (data->mlx)
 	{
-		mlx_destroy_display(data->mlx);
 		free(data->mlx);
 	}
 	free(data);

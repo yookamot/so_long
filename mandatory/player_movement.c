@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player_movement.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: okamotoyota <okamotoyota@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 19:28:31 by yookamot          #+#    #+#             */
-/*   Updated: 2025/02/22 14:29:40 by yookamot         ###   ########.fr       */
+/*   Updated: 2025/06/17 15:08:51 by okamotoyota      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,15 @@ static void	move_player(t_data *data, int new_x, int new_y)
 
 int	key_hook(int keycode, t_data *data)
 {
-	if (keycode == XK_Escape)
+	if (keycode == 53)
 		exit_game(data, 0);
-	else if (keycode == XK_w)
+	else if (keycode == 13)
 		move_player(data, data->player.x, data->player.y - 1);
-	else if (keycode == XK_s)
+	else if (keycode == 1)
 		move_player(data, data->player.x, data->player.y + 1);
-	else if (keycode == XK_a)
+	else if (keycode == 0)
 		move_player(data, data->player.x - 1, data->player.y);
-	else if (keycode == XK_d)
+	else if (keycode == 2)
 		move_player(data, data->player.x + 1, data->player.y);
 	return (0);
 }

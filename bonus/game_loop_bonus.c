@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   game_loop_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yookamot <yookamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: okamotoyota <okamotoyota@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 20:43:18 by yookamot          #+#    #+#             */
-/*   Updated: 2025/02/10 17:44:42 by yookamot         ###   ########.fr       */
+/*   Updated: 2025/06/17 15:14:26 by okamotoyota      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
 #ifndef FRAME_DELAY
-# define FRAME_DELAY 60
+# define FRAME_DELAY 30
 #endif
 
 #ifndef GAME_OVER
